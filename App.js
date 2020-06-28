@@ -1,12 +1,15 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { View, StyleSheet } from 'react-native'
+import Header from './src/components/Header'
+import AlbumList from './src/components/AlbumList'
 
-export default function App() {
+const App = _ => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <View style={{ flex: 1 }}>
+      <Header title='Allybums' />
+      <AlbumList />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -16,4 +19,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})
+
+export default App
